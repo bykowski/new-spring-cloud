@@ -1,0 +1,17 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+server:
+  port: 8012
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          uri: https://github.com/bykowski/config-repo
+          username: przemyslaw@bykowski.pl
+          password: ''
